@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Man-DB",
+  "version": "2.9.4",
+  "architectures": ["x86_64"],
+  "description": "Implementation of the standard Unix documentation system accessed using the man command",
+  "website": "https://www.nongnu.org/man-db/",
+  "downloadLinks": ["https://download.savannah.gnu.org/releases/man-db/man-db-2.9.4.tar.xz"],
+  "shasums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Man-DB",
+      "version": "2.9.4",
+      "options": []
+    }
+  ],
+  "options": []
+}

@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Util-Linux",
+  "version": "2.37.2",
+  "architectures": ["x86_64"],
+  "description": "Random collection of Linux utilities",
+  "website": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/",
+  "downloadLinks": ["https://www.kernel.org/pub/linux/utils/util-linux/v2.37/util-linux-2.37.2.tar.xz"],
+  "shasums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Procps-Ng",
+      "version": "3.3.17",
+      "options": []
+    }
+  ],
+  "options": []
+}

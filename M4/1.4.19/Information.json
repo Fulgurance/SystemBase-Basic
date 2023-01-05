@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "M4",
+  "version": "1.4.19",
+  "architectures": ["x86_64"],
+  "description": "The GNU M4 implementation of the traditional Unix macro processor",
+  "website": "https://www.gnu.org/software/m4/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz"],
+  "shasums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Readline",
+      "version": "8.1",
+      "options": []
+    }
+  ],
+  "options": []
+}

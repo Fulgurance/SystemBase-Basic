@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Bc",
+  "version": "5.0.0",
+  "architectures": ["x86_64"],
+  "description": "Implementation of the POSIX bc calculator that implements GNU bc extensions",
+  "website": "https://git.yzena.com/gavin/bc",
+  "downloadLinks": ["https://github.com/gavinhoward/bc/releases/download/5.0.0/bc-5.0.0.tar.xz"],
+  "shasums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "M4",
+      "version": "1.4.19",
+      "options": []
+    }
+  ],
+  "options": []
+}

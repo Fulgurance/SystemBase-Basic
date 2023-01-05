@@ -6,8 +6,7 @@
   "description": "Collection of common network programs",
   "website": "https://www.gnu.org/software/inetutils/",
   "downloadLinks": ["https://ftp.gnu.org/gnu/inetutils/inetutils-2.1.tar.xz"],
-  "signatureLinks": [],
-  "shasumLinks": [],
+  "shasums": [],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "File",
+  "version": "5.40",
+  "architectures": ["x86_64"],
+  "description": "Command-line tool that tells what kind of data a file contains",
+  "website": "https://www.darwinsys.com/file/",
+  "downloadLinks": ["https://astron.com/pub/file/file-5.40.tar.gz"],
+  "shasums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Zstd",
+      "version": "1.5.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

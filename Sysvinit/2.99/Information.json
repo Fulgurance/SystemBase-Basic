@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Sysvinit",
+  "version": "2.99",
+  "architectures": ["x86_64"],
+  "description": "This System V init initializes and shuts down the system and well as managing runlevels",
+  "website": "https://savannah.nongnu.org/projects/sysvinit",
+  "downloadLinks": ["https://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.99.tar.xz"],
+  "shasums": [],
+  "patchesLinks": ["https://www.linuxfromscratch.org/patches/lfs/11.0/sysvinit-2.99-consolidated-1.patch"],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Sysklogd",
+      "version": "1.5.1",
+      "options": []
+    }
+  ],
+  "options": []
+}

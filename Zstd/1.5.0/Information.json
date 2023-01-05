@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Zstd",
+  "version": "1.5.0",
+  "architectures": ["x86_64"],
+  "description": "Fast compression algorithm providing high compression ratios",
+  "website": "https://facebook.github.io/zstd/",
+  "downloadLinks": ["https://github.com/facebook/zstd/releases/download/v1.5.0/zstd-1.5.0.tar.gz"],
+  "shasums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Xz",
+      "version": "5.2.5",
+      "options": []
+    }
+  ],
+  "options": []
+}
