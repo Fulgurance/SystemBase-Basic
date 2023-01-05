@@ -1,0 +1,21 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Glibc",
+  "version": "2.34",
+  "architectures": ["x86_64"],
+  "description": "The GNU C Library project",
+  "website": "https://www.gnu.org/software/libc/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/glibc/glibc-2.34.tar.xz"],
+  "signatureLinks": [],
+  "shasumLinks": [],
+  "patchesLinks": ["https://www.linuxfromscratch.org/patches/lfs/11.0/glibc-2.34-fhs-1.patch"],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Iana-Etc",
+      "version": "20210611",
+      "options": []
+    }
+  ],
+  "options": []
+}
