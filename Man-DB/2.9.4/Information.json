@@ -6,7 +6,7 @@
   "description": "Implementation of the standard Unix documentation system accessed using the man command",
   "website": "https://www.nongnu.org/man-db/",
   "downloadLinks": ["https://download.savannah.gnu.org/releases/man-db/man-db-2.9.4.tar.xz"],
-  "md5sums": [],
+  "md5sums": ["6e233a555f7b9ae91ce7cd0faa322bce"],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

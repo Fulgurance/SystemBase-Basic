@@ -6,7 +6,7 @@
   "description": "The GNU Readline library with set of functions for use by applications that allow users to edit command lines as they are typed in",
   "website": "https://tiswww.case.edu/php/chet/readline/rltop.html",
   "downloadLinks": ["https://ftp.gnu.org/gnu/readline/readline-8.1.tar.gz"],
-  "md5sums": [],
+  "md5sums": ["e9557dd5b1409f5d7b37ef717c64518e"],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

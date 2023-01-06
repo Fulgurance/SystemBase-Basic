@@ -6,7 +6,7 @@
   "description": "Command line and full screen utilities for browsing procfs",
   "website": "https://sourceforge.net/projects/procps-ng/",
   "downloadLinks": ["https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-3.3.17.tar.xz"],
-  "md5sums": [],
+  "md5sums": ["d60613e88c2f442ebd462b5a75313d56"],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

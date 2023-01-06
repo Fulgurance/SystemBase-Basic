@@ -6,7 +6,7 @@
   "description": "Command-line tool that tells what kind of data a file contains",
   "website": "https://www.darwinsys.com/file/",
   "downloadLinks": ["https://astron.com/pub/file/file-5.40.tar.gz"],
-  "md5sums": [],
+  "md5sums": ["72540ea1cc8c6e1dee35d6100ec66589"],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

@@ -6,7 +6,7 @@
   "description": "The GNU C Library project",
   "website": "https://www.gnu.org/software/libc/",
   "downloadLinks": ["https://ftp.gnu.org/gnu/glibc/glibc-2.34.tar.xz"],
-  "md5sums": [],
+  "md5sums": ["31998b53fb39cb946e96abc310af1c89"],
   "patchesLinks": ["https://www.linuxfromscratch.org/patches/lfs/11.0/glibc-2.34-fhs-1.patch"],
   "installedFiles": [],
   "dependencies": [

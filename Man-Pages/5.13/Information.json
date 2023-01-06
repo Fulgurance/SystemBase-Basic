@@ -6,7 +6,7 @@
   "description": "The Linux man-pages project documents the Linux kernel and C library interfaces that are employed by user-space programs",
   "website": "https://www.kernel.org/doc/man-pages/",
   "downloadLinks": ["https://www.kernel.org/pub/linux/docs/man-pages/man-pages-5.13.tar.xz"],
-  "md5sums": [],
+  "md5sums": ["3ac24e8c6fae26b801cb87ceb63c0a30"],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
