@@ -6,7 +6,7 @@
   "description": "High-quality data compressor twice as fast at compression and six times faster at decompression",
   "website": "https://sourceware.org/bzip2/",
   "downloadLinks": ["https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz"],
-  "shasums": [],
+  "md5sums": [],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

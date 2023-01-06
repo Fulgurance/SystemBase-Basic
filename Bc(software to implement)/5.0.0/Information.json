@@ -6,7 +6,7 @@
   "description": "Implementation of the POSIX bc calculator that implements GNU bc extensions",
   "website": "https://git.yzena.com/gavin/bc",
   "downloadLinks": ["https://github.com/gavinhoward/bc/releases/download/5.0.0/bc-5.0.0.tar.xz"],
-  "shasums": [],
+  "md5sums": [],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

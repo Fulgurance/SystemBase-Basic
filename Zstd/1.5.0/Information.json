@@ -6,7 +6,7 @@
   "description": "Fast compression algorithm providing high compression ratios",
   "website": "https://facebook.github.io/zstd/",
   "downloadLinks": ["https://github.com/facebook/zstd/releases/download/v1.5.0/zstd-1.5.0.tar.gz"],
-  "shasums": [],
+  "md5sums": [],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

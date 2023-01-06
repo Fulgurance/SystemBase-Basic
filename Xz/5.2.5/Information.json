@@ -6,7 +6,7 @@
   "description": "Data compression software with a high compression ratio",
   "website": "https://tukaani.org/xz",
   "downloadLinks": ["https://tukaani.org/xz/xz-5.2.5.tar.xz"],
-  "shasums": [],
+  "md5sums": [],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

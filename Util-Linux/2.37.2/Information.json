@@ -6,7 +6,7 @@
   "description": "Random collection of Linux utilities",
   "website": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/",
   "downloadLinks": ["https://www.kernel.org/pub/linux/utils/util-linux/v2.37/util-linux-2.37.2.tar.xz"],
-  "shasums": [],
+  "md5sums": [],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

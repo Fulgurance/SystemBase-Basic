@@ -6,7 +6,7 @@
   "description": "This System V init initializes and shuts down the system and well as managing runlevels",
   "website": "https://savannah.nongnu.org/projects/sysvinit",
   "downloadLinks": ["https://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.99.tar.xz"],
-  "shasums": [],
+  "md5sums": [],
   "patchesLinks": ["https://www.linuxfromscratch.org/patches/lfs/11.0/sysvinit-2.99-consolidated-1.patch"],
   "installedFiles": [],
   "dependencies": [
