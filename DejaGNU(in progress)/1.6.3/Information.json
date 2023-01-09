@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "DejaGNU",
+  "version": "1.6.3",
+  "architectures": ["x86_64"],
+  "description": "DejaGnu framework for testing other programs",
+  "website": "https://www.gnu.org/software/dejagnu/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.3.tar.gz"],
+  "md5sums": ["68c5208c58236eba447d7d6d1326b821"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Expect",
+      "version": "5.45.4",
+      "options": []
+    }
+  ],
+  "options": []
+}

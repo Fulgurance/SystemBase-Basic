@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "GMP",
+  "version": "6.2.1",
+  "architectures": ["x86_64"],
+  "description": "GMP library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers",
+  "website": "https://www.gnu.org/software/gmp/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/gmp/gmp-6.2.1.tar.xz"],
+  "md5sums": ["0b82665c4a92fd2ade7440c13fcaa42b"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Binutils",
+      "version": "2.37",
+      "options": []
+    }
+  ],
+  "options": []
+}
