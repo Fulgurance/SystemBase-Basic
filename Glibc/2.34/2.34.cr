@@ -24,12 +24,13 @@ class Target < ISM::Software
 
     def prepareInstallation
         super
+        makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc")
+        makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/var/cache/nscd")
+        makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/locale")
+        generateEmptyFile("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/ld.so.conf")
+        fileReplaceText("#{mainWorkDirectoryPath}/Makefile","$(PERL)","echo not running")
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        fileReplaceText()
-        copyFile()
-        makeDirectory()
-        makeDirectory()
-        makeSource()
+        copyFile("#{mainWorkDirectoryPath}/nscd/nscd.conf","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/nscd.conf")
     end
 
 end
