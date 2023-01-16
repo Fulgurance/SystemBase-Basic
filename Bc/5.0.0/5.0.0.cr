@@ -2,11 +2,11 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+        configureSource([   "CC=gcc",
+                            "--prefix=#{Ism.settings.rootPath}/usr",
                             "-G",
                             "-O3"],
-                            buildDirectoryPath,
-                            "CC=gcc")
+                            buildDirectoryPath)
     end
 
     def build
