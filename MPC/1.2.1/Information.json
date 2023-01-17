@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "MPC",
+  "version": "1.2.1",
+  "architectures": ["x86_64"],
+  "description": "C library for the arithmetic of complex numbers with arbitrarily high precision and correct rounding of the result",
+  "website": "http://www.multiprecision.org/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/mpc/mpc-1.2.1.tar.gz"],
+  "md5sums": ["9f16c976c25bb0f76b50be749cd7a3a8"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "MPFR",
+      "version": "4.1.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

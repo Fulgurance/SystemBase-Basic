@@ -7,7 +7,7 @@
   "website": "https://www.gnu.org/software/binutils/",
   "downloadLinks": ["https://ftp.gnu.org/gnu/binutils/binutils-2.37.tar.xz"],
   "md5sums": ["e78d9ff2976b745a348f4c1f27c77cb1"],
-  "patchesLinks": [],
+  "patchesLinks": ["https://www.linuxfromscratch.org/patches/lfs/11.0/binutils-2.37-upstream_fix-1.patch"],
   "installedFiles": [],
   "dependencies": [
     {

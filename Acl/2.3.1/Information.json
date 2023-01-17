@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Acl",
+  "version": "2.3.1",
+  "architectures": ["x86_64"],
+  "description": "Commands for Manipulating POSIX Access Control Lists",
+  "website": "https://savannah.nongnu.org/projects/acl",
+  "downloadLinks": ["https://download.savannah.gnu.org/releases/acl/acl-2.3.1.tar.xz"],
+  "md5sums": ["95ce715fe09acca7c12d3306d0f076b2"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Attr",
+      "version": "2.5.1",
+      "options": []
+    }
+  ],
+  "options": []
+}

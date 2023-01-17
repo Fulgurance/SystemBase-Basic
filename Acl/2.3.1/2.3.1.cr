@@ -2,7 +2,9 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr"],
+        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+                            "--disable-static",
+                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/acl-2.3.1"],
                             buildDirectoryPath)
     end
 

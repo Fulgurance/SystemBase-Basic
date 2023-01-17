@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Attr",
+  "version": "2.5.1",
+  "architectures": ["x86_64"],
+  "description": "Commands for Manipulating Filesystem Extended Attributes",
+  "website": "https://savannah.nongnu.org/projects/attr",
+  "downloadLinks": ["https://download.savannah.gnu.org/releases/attr/attr-2.5.1.tar.gz"],
+  "md5sums": ["ac1c5a7a084f0f83b8cace34211f64d8"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "MPC",
+      "version": "1.2.1",
+      "options": []
+    }
+  ],
+  "options": []
+}
