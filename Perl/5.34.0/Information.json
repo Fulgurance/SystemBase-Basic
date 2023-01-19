@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Perl",
+  "version": "5.34.0",
+  "architectures": ["x86_64"],
+  "description": "Highly capable, feature-rich programming language",
+  "website": "https://www.perl.org/",
+  "downloadLinks": ["https://www.cpan.org/src/5.0/perl-5.34.0.tar.xz"],
+  "md5sums": ["df7ecb0653440b26dc951ad9dbfab517"],
+  "patchesLinks": ["https://www.linuxfromscratch.org/patches/lfs/11.0/perl-5.34.0-upstream_fixes-1.patch"],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Less",
+      "version": "590",
+      "options": []
+    }
+  ],
+  "options": []
+}

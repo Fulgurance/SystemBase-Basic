@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Libtool",
+  "version": "2.4.6",
+  "architectures": ["x86_64"],
+  "description": "Generic library support script that hides the complexity of using shared libraries behind a consistent, portable interface",
+  "website": "https://www.gnu.org/software/libtool/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz"],
+  "md5sums": ["1bfb9b923f2c1339b4d2ce1807064aa5"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Bash",
+      "version": "5.1.8",
+      "options": []
+    }
+  ],
+  "options": []
+}

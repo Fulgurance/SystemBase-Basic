@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Bash",
+  "version": "5.1.8",
+  "architectures": ["x86_64"],
+  "description": "The GNU Bourne Again SHell",
+  "website": "https://www.gnu.org/software/bash/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/bash/bash-5.1.8.tar.gz"],
+  "md5sums": ["23eee6195b47318b9fd878e590ccb38c"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Grep",
+      "version": "3.7",
+      "options": []
+    }
+  ],
+  "options": []
+}

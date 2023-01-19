@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Bison",
+  "version": "3.7.6",
+  "architectures": ["x86_64"],
+  "description": "Parser generator that converts an annotated context-free grammar into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables",
+  "website": "https://www.gnu.org/software/bison/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/bison/bison-3.7.6.tar.xz"],
+  "md5sums": ["d61aa92e3562cb7292b004ce96173cf7"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gettext",
+      "version": "0.21",
+      "options": []
+    }
+  ],
+  "options": []
+}
