@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Pkg-Config",
+  "version": "0.29.2",
+  "architectures": ["x86_64"],
+  "description": "Helper tool used when compiling applications and libraries",
+  "website": "https://www.freedesktop.org/wiki/Software/pkg-config",
+  "downloadLinks": ["https://pkg-config.freedesktop.org/releases/pkg-config-0.29.2.tar.gz"],
+  "md5sums": ["f6e931e319531b736fadc017f470e68a"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gcc",
+      "version": "11.2.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

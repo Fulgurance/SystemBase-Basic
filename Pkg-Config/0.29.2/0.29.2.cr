@@ -2,7 +2,10 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr"],
+        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+                            "--with-internal-glib",
+                            "--disable-host-tool",
+                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/pkg-config-0.29.2"],
                             buildDirectoryPath)
     end
 
@@ -14,11 +17,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
-    end
-
-    def clean
-        super
-        deleteFile("#{Ism.settings.rootPath}/usr/lib/libz.a")
     end
 
 end

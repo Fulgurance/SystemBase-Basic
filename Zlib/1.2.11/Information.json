@@ -5,8 +5,8 @@
   "architectures": ["x86_64"],
   "description": "Lossless data-compression library portable across platforms",
   "website": "https://www.zlib.net/",
-  "downloadLinks": ["https://zlib.net/zlib-1.2.11.tar.xz"],
-  "md5sums": ["85adef240c5f370b308da8c938951a68"],
+  "downloadLinks": ["https://zlib.net/fossils/zlib-1.2.11.tar.gz"],
+  "md5sums": ["1c9f62f0778697a09d36121ead88e08e"],
   "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [

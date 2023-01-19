@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Gcc",
+  "version": "11.2.0",
+  "architectures": ["x86_64"],
+  "description": "The GNU Compiler Collection (Temporary Tools)",
+  "website": "https://gcc.gnu.org/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz"],
+  "md5sums": ["31c86f2ced76acac66992eeedce2fce2"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Shadow",
+      "version": "4.9",
+      "options": []
+    }
+  ],
+  "options": []
+}
