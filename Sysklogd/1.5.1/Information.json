@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Sysklogd",
+  "version": "1.5.1",
+  "architectures": ["x86_64"],
+  "description": "Daemon providing logging of messages received from programs and facilities on the local host as well as from remote hosts",
+  "website": "https://www.infodrom.org/projects/sysklogd/",
+  "downloadLinks": ["https://www.infodrom.org/projects/sysklogd/download/sysklogd-1.5.1.tar.gz"],
+  "md5sums": ["c70599ab0d037fde724f7210c2c8d7f8"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "E2fsprogs",
+      "version": "1.46.4",
+      "options": []
+    }
+  ],
+  "options": []
+}

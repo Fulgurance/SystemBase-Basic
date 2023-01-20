@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Kbd",
+  "version": "2.4.0",
+  "architectures": ["x86_64"],
+  "description": "Utilities for managing Linux console mainly, loading console fonts and keyboard maps",
+  "website": "https://kbd-project.org/",
+  "downloadLinks": ["https://www.kernel.org/pub/linux/utils/kbd/kbd-2.4.0.tar.xz"],
+  "md5sums": ["3cac5be0096fcf7b32dcbd3c53831380"],
+  "patchesLinks": ["https://www.linuxfromscratch.org/patches/lfs/11.0/kbd-2.4.0-backspace-1.patch"],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "IPRoute2",
+      "version": "5.13.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

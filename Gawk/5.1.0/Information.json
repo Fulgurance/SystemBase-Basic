@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Gawk",
+  "version": "5.1.0",
+  "architectures": ["x86_64"],
+  "description": "The Gawk utility interpret to handle simple data-reformatting jobs",
+  "website": "https://www.gnu.org/software/gawk/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/gawk/gawk-5.1.0.tar.xz"],
+  "md5sums": ["8470c34eeecc41c1aa0c5d89e630df50"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Diffutils",
+      "version": "3.8",
+      "options": []
+    }
+  ],
+  "options": []
+}
