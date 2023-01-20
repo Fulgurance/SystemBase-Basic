@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Python",
+  "version": "3.9.6",
+  "architectures": ["x86_64"],
+  "description": "Programming language that lets you work more quickly and integrate your systems more effectively",
+  "website": "https://www.python.org/",
+  "downloadLinks": ["https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tar.xz"],
+  "md5sums": ["ecc29a7688f86e550d29dba2ee66cf80"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Openssl",
+      "version": "1.1.1l",
+      "options": []
+    }
+  ],
+  "options": []
+}

@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Libpipeline",
+  "version": "1.5.3",
+  "architectures": ["x86_64"],
+  "description": "C library for manipulating pipelines of subprocesses in a flexible and convenient way",
+  "website": "http://libpipeline.nongnu.org/",
+  "downloadLinks": ["https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.3.tar.gz"],
+  "md5sums": ["dad443d0911cf9f0f1bd90a334bc9004"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Kbd",
+      "version": "2.4.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

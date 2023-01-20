@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Findutils",
+  "version": "4.8.0",
+  "architectures": ["x86_64"],
+  "description": "The GNU Find Utilities basic directory searching",
+  "website": "https://www.gnu.org/software/findutils/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/findutils/findutils-4.8.0.tar.xz"],
+  "md5sums": ["eeefe2e6380931a77dfa6d9350b43186"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gawk",
+      "version": "5.1.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

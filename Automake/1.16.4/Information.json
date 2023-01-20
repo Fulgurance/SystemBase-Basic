@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Automake",
+  "version": "1.16.4",
+  "architectures": ["x86_64"],
+  "description": "Tool for automatically generating Makefile.in files compliant with the GNU Coding Standards",
+  "website": "https://www.gnu.org/software/automake/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/automake/automake-1.16.4.tar.xz"],
+  "md5sums": ["86e8e682bd74e6390a016c4d9c11267c"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Autoconf",
+      "version": "2.71",
+      "options": []
+    }
+  ],
+  "options": []
+}

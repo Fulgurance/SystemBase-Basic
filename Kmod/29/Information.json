@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Kmod",
+  "version": "29",
+  "architectures": ["x86_64"],
+  "description": "Libraries and utilities for loading kernel modules",
+  "website": "https://www.kernel.org/pub/linux/utils/kernel/kmod",
+  "downloadLinks": ["https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-29.tar.xz"],
+  "md5sums": ["e81e63acd80697d001c8d85c1acb38a0"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Automake",
+      "version": "1.16.4",
+      "options": []
+    }
+  ],
+  "options": []
+}

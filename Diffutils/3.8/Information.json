@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Diffutils",
+  "version": "3.8",
+  "architectures": ["x86_64"],
+  "description": "GNU Diffutils programs to finding differences between files",
+  "website": "https://www.gnu.org/software/diffutils/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz"],
+  "md5sums": ["6a6b0fdc72acfe3f2829aab477876fbc"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Check",
+      "version": "0.15.2",
+      "options": []
+    }
+  ],
+  "options": []
+}
