@@ -2,8 +2,9 @@ class Target < ISM::Software
     
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
-                            "--mandir=#{Ism.settings.rootPath}/usr/share/man",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
+                            "--mandir=/usr/share/man",
                             "--with-shared",
                             "--without-debug",
                             "--without-normal",
@@ -20,6 +21,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
         fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libncurses.so","INPUT(-lncursesw)")
         fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libform.so","INPUT(-lformw)")
         fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libpanel.so","INPUT(-lpanelw)")

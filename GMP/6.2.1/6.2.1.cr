@@ -2,10 +2,11 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
                             "--enable-cxx",
                             "--disable-static",
-                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/gmp-6.2.1"],
+                            "--docdir=/usr/share/doc/gmp-6.2.1"],
                             buildDirectoryPath)
     end
 
@@ -19,6 +20,7 @@ class Target < ISM::Software
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install-html"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

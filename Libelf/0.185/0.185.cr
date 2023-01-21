@@ -2,7 +2,8 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
                             "--disable-debuginfod",
                             "--enable-libdebuginfod=dummy"],
                             buildDirectoryPath)
@@ -16,6 +17,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"-C","libelf","DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
         copyFile("#{buildDirectoryPath}/config/libelf.pc","#{builtSoftwareDirectoryPath}/usr/lib/pkgconfig")
     end
 

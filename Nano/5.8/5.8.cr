@@ -2,10 +2,11 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
-                            "--sysconfdir=#{Ism.settings.rootPath}/etc",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
+                            "--sysconfdir=/etc",
                             "--enable-utf8",
-                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/nano-5.8"],
+                            "--docdir=/usr/share/doc/nano-5.8"],
                             buildDirectoryPath)
     end
     
@@ -17,6 +18,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

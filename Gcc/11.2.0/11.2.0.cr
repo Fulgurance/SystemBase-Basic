@@ -13,7 +13,8 @@ class Target < ISM::Software
     
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
                             "LD=ld",
                             "--enable-languages=c,c++",
                             "--disable-multilib",
@@ -30,6 +31,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
         makeDirectory("#{builtSoftwareDirectoryPath}/usr/share/gdb/auto-load/usr/lib")
         copyFile("#{Ism.settings.rootPath}/usr/lib/*gdb.py","#{builtSoftwareDirectoryPath}/usr/share/gdb/auto-load/usr/lib")
     end

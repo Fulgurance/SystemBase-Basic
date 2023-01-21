@@ -8,12 +8,14 @@ class Target < ISM::Software
 
     def build
         super
+        @useChroot=true
         makeSource([Ism.settings.makeOptions,"prefix=/usr","lib=lib"],buildDirectoryPath)
     end
 
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"prefix=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr","lib=lib","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

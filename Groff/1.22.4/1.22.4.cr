@@ -2,8 +2,9 @@ class Target < ISM::Software
     
     def configure
         super
+        @useChroot=true
         configureSource([   "PAGE=A4",
-                            "--prefix=#{Ism.settings.rootPath}/usr"],
+                            "--prefix=/usr"],
                             buildDirectoryPath)
     end
     
@@ -15,6 +16,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

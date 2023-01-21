@@ -2,10 +2,11 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
                             "--disable-static",
-                            "--sysconfdir=#{Ism.settings.rootPath}/etc",
-                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/attr-2.5.1"],
+                            "--sysconfdir=/etc",
+                            "--docdir=/usr/share/doc/attr-2.5.1"],
                             buildDirectoryPath)
     end
 
@@ -17,6 +18,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

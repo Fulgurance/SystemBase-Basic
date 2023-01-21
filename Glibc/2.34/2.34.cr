@@ -8,11 +8,12 @@ class Target < ISM::Software
 
     def configure
         super
+        @useChroot=true
         configureSource([   "--prefix=/usr",
                             "--disable-werror",
                             "--enable-kernel=3.2",
                             "--enable-stack-protector=strong",
-                            "--with-headers=#{Ism.settings.rootPath}/usr/include",
+                            "--with-headers=/usr/include",
                             "libc_cv_slibdir=/usr/lib"],
                             buildDirectoryPath)
     end
@@ -20,6 +21,7 @@ class Target < ISM::Software
     def build
         super
         makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+        @useChroot=false
     end
 
     def prepareInstallation
@@ -29,7 +31,9 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/locale")
         generateEmptyFile("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/ld.so.conf")
         fileReplaceText("#{mainWorkDirectoryPath}/Makefile","$(PERL)","echo not running")
+        @useChroot=true
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        @useChroot=false
         copyFile("#{mainWorkDirectoryPath}/nscd/nscd.conf","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/nscd.conf")
     end
 

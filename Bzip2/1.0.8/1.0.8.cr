@@ -4,6 +4,7 @@ class Target < ISM::Software
         super
         fileReplaceText("#{buildDirectoryPath}/Makefile","ln -s -f $(PREFIX)/bin/","ln -s -f ")
         fileReplaceText("#{buildDirectoryPath}/Makefile","$(PREFIX)/man","$(PREFIX)/share/man")
+        @useChroot=true
         makeSource([Ism.settings.makeOptions,"-f","Makefile-libbz2_so"],buildDirectoryPath)
         makeSource([Ism.settings.makeOptions,"clean"],buildDirectoryPath)
     end
@@ -16,6 +17,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"PREFIX=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr","install"],buildDirectoryPath)
+        @useChroot=false
         copyFile(Dir["#{buildDirectoryPath}/libbz2.so.*"],"#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib")
         copyFile("#{buildDirectoryPath}/bzip2-shared","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/bin/bzip2")
     end

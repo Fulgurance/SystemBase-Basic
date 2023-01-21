@@ -8,10 +8,11 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
                             "--disable-static",
                             "--with-curses",
-                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/readline-8.1"],
+                            "--docdir=/usr/share/doc/readline-8.1"],
                             buildDirectoryPath)
     end
 
@@ -23,6 +24,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"SHLIB_LIBS=\"-lncursesw\"","DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

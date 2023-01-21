@@ -2,8 +2,9 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
-                            "--sysconfdir=#{Ism.settings.rootPath}/etc",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
+                            "--sysconfdir=/etc",
                             "--with-xz",
                             "--with-zstd",
                             "--with-zlib"],
@@ -18,6 +19,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
         makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/depmod",:symbolicLinkByOverwrite)
         makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/insmod",:symbolicLinkByOverwrite)
         makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/modinfo",:symbolicLinkByOverwrite)

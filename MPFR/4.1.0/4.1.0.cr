@@ -2,10 +2,11 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
                             "--disable-static",
                             "--enable-thread-safe",
-                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/mpfr-4.1.0"],
+                            "--docdir=/usr/share/doc/mpfr-4.1.0"],
                             buildDirectoryPath)
     end
 
@@ -19,6 +20,7 @@ class Target < ISM::Software
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install-html"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

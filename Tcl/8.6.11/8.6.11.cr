@@ -2,8 +2,9 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
-                            "--mandir=#{Ism.settings.rootPath}/usr/share/man",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
+                            "--mandir=/usr/share/man",
                             "--enable-64bit"],
                             "#{buildDirectoryPath}/unix")
     end
@@ -15,6 +16,7 @@ class Target < ISM::Software
 
     def prepareInstallation
         super
+        @useChroot=false
         fileReplaceText("#{buildDirectoryPath}/unix/tclConfig.sh","#{buildDirectoryPath}/unix","/usr/lib")
         fileReplaceText("#{buildDirectoryPath}/unix/tclConfig.sh","#{buildDirectoryPath}","/usr/include")
         fileReplaceText("#{buildDirectoryPath}/unix/pkgs/tdbc1.1.2/tdbcConfig.sh","#{buildDirectoryPath}/unix/pkgs/tdbc1.1.2","/usr/lib/tdbc1.1.2")
@@ -24,14 +26,16 @@ class Target < ISM::Software
         fileReplaceText("#{buildDirectoryPath}/unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath}/unix/pkgs/itcl4.2.1","/usr/lib/itcl4.2.1")
         fileReplaceText("#{buildDirectoryPath}/unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath}/pkgs/itcl4.2.1/generic","/usr/include")
         fileReplaceText("#{buildDirectoryPath}/unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath}/pkgs/itcl4.2.1","/usr/include")
+        @useChroot=true
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],"#{buildDirectoryPath}/unix")
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install-private-headers"],"#{buildDirectoryPath}/unix")
+        @useChroot=false
+        moveFile("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/man/man3/Thread.3","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/man/man3/Tcl_Thread.3")
     end
 
     def install
         super
         makeLink("tclsh8.6","#{Ism.settings.rootPath}/usr/bin/tclsh",:symbolicLinkByOverwrite)
-        moveFile("/usr/share/man/man3/Thread.3","/usr/share/man/man3/Tcl_Thread.3")
     end
 
 end

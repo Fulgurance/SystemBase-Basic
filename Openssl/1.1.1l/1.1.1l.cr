@@ -2,8 +2,9 @@ class Target < ISM::Software
     
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
-                            "--openssldir=#{Ism.settings.rootPath}/etc/ssl",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
+                            "--openssldir=/etc/ssl",
                             "--libdir=lib",
                             "shared",
                             "zlib-dynamic"],
@@ -17,8 +18,11 @@ class Target < ISM::Software
     
     def prepareInstallation
         super
+        @useChroot=false
         fileReplaceText("INSTALL_LIBS=libcrypto.a libssl.a","INSTALL_LIBS=")
+        @useChroot=true
         makeSource([Ism.settings.makeOptions,"MANSUFFIX=ssl","DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
         copyDirectory("#{Ism.settings.rootPath}/usr/share/doc/openssl","#{builtSoftwareDirectoryPath}/usr/share/doc/openssl-1.1.1l")
     end
 

@@ -2,8 +2,9 @@ class Target < ISM::Software
     
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
-                            "--docdir=#{Ism.settings.rootPath}/usr/share/doc/bison-3.7.6"],
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
+                            "--docdir=/usr/share/doc/bison-3.7.6"],
                             buildDirectoryPath)
     end
     
@@ -15,6 +16,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

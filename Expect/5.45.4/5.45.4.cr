@@ -2,11 +2,12 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr",
-                            "--with-tcl=#{Ism.settings.rootPath}/usr/lib",
+        @useChroot=true
+        configureSource([   "--prefix=/usr",
+                            "--with-tcl=/usr/lib",
                             "--enable-shared",
-                            "--mandir=#{Ism.settings.rootPath}/usr/share/man",
-                            "--with-tclinclude=#{Ism.settings.rootPath}/usr/include"],
+                            "--mandir=/usr/share/man",
+                            "--with-tclinclude=/usr/include"],
                             buildDirectoryPath)
     end
 
@@ -18,6 +19,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
     def install

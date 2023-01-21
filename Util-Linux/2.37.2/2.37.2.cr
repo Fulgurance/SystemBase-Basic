@@ -2,7 +2,8 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "ADJTIME_PATH=#{Ism.settings.rootPath}/var/lib/hwclock/adjtime",
+        @useChroot=true
+        configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
                             "--libdir=/usr/lib",
                             "--docdir=/usr/share/doc/util-linux-2.37.2",
                             "--disable-chfn-chsh",
@@ -16,7 +17,7 @@ class Target < ISM::Software
                             "--without-python",
                             "--without-systemd",
                             "--without-systemdsystemunitdir",
-                            "runstatedir=#{Ism.settings.rootPath}/run"],
+                            "runstatedir=/run"],
                             buildDirectoryPath)
     end
 
@@ -28,6 +29,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
     end
 
 end

@@ -7,7 +7,8 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr"],
+        @useChroot=true
+        configureSource([   "--prefix=/usr"],
                             buildDirectoryPath)
     end
 
@@ -19,6 +20,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        @useChroot=false
         copyFile("#{buildDirectoryPath}doc/I18N-HOWTO","#{builtSoftwareDirectoryPath}/usr/share/doc/intltool-0.51.0/I18N-HOWTO")
     end
 
