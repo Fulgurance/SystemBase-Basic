@@ -3,11 +3,11 @@ class Target < ISM::Software
     def configure
         super
         @useChroot=true
-        configureSource([   "CC=gcc",
-                            "--prefix=/usr",
+        configureSource([   "--prefix=/usr",
                             "-G",
                             "-O3"],
-                            buildDirectoryPath)
+                            buildDirectoryPath,
+                            {"CC" => "gcc",})
     end
 
     def build
