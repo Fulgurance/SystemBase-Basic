@@ -3,9 +3,10 @@ class Target < ISM::Software
     def configure
         super
         @useChroot=true
-        configureSource([   "FORCE_UNSAFE_CONFIGURE=1",
-                            "--prefix=/usr"],
-                            buildDirectoryPath)
+        configureSource([   "--prefix=/usr"],
+                            buildDirectoryPath,
+                            "",
+                            {"FORCE_UNSAFE_CONFIGURE" => "1"})
     end
     
     def build

@@ -3,9 +3,10 @@ class Target < ISM::Software
     def configure
         super
         @useChroot=true
-        configureSource([   "PAGE=A4",
-                            "--prefix=/usr"],
-                            buildDirectoryPath)
+        configureSource([   "--prefix=/usr"],
+                            buildDirectoryPath,
+                            "",
+                            {"PAGE" => "A4"})
     end
     
     def build

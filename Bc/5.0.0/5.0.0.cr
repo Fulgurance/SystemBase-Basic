@@ -8,7 +8,7 @@ class Target < ISM::Software
                             "-O3"],
                             buildDirectoryPath,
                             "",
-                            {"CC" => "gcc",})
+                            {"CC" => "gcc"})
     end
 
     def build

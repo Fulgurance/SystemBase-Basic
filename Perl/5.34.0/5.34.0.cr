@@ -3,9 +3,7 @@ class Target < ISM::Software
     def configure
         super
         @useChroot=true
-        runScript("Configure",[ "BUILD_ZLIB=False",
-                                "BUILD_BZIP2=0",
-                                "-des",
+        runScript("Configure",[ "-des",
                                 "-Dprefix=/usr",
                                 "-Dvendorprefix=/usr",
                                 "-Dprivlib=/usr/lib/perl5/5.34/core_perl",
@@ -19,7 +17,8 @@ class Target < ISM::Software
                                 "-Dpager=\"/usr/bin/less -isR\"",
                                 "-Duseshrplib",
                                 "-Dusethreads"],
-                                buildDirectoryPath)
+                                buildDirectoryPath,
+                                {"BUILD_ZLIB" => "False","BUILD_BZIP2" => "0"})
     end
     
     def build
