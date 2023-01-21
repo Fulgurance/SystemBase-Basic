@@ -7,6 +7,7 @@ class Target < ISM::Software
                             "-G",
                             "-O3"],
                             buildDirectoryPath,
+                            "",
                             {"CC" => "gcc",})
     end
 
