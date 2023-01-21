@@ -25,8 +25,8 @@ class Target < ISM::Software
 
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"exec_prefix=/usr","DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
-        makeSource([Ism.settings.makeOptions,"-C","man","DESTDIR=#{builtSoftwareDirectoryPath}","install-man"],buildDirectoryPath)
+        makeSource([Ism.settings.makeOptions,"exec_prefix=/usr","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource([Ism.settings.makeOptions,"-C","man","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install-man"],buildDirectoryPath)
         @useChroot=false
         makeDirectory("#{builtSoftwareDirectoryPath}/etc/default")
     end

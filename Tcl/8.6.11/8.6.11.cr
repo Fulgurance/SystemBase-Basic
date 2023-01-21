@@ -27,8 +27,8 @@ class Target < ISM::Software
         fileReplaceText("#{buildDirectoryPath}/unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath}/pkgs/itcl4.2.1/generic","/usr/include")
         fileReplaceText("#{buildDirectoryPath}/unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath}/pkgs/itcl4.2.1","/usr/include")
         @useChroot=true
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],"#{buildDirectoryPath}/unix")
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install-private-headers"],"#{buildDirectoryPath}/unix")
+        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],"#{buildDirectoryPath}/unix")
+        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install-private-headers"],"#{buildDirectoryPath}/unix")
         @useChroot=false
         moveFile("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/man/man3/Thread.3","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/share/man/man3/Tcl_Thread.3")
     end

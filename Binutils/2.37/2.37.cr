@@ -28,7 +28,7 @@ class Target < ISM::Software
 
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"tooldir=/usr","DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        makeSource([Ism.settings.makeOptions,"tooldir=/usr","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         @useChroot=false
         deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/bfd.a")
         deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/ctf.a")

@@ -21,7 +21,7 @@ class Target < ISM::Software
         @useChroot=false
         fileReplaceText("INSTALL_LIBS=libcrypto.a libssl.a","INSTALL_LIBS=")
         @useChroot=true
-        makeSource([Ism.settings.makeOptions,"MANSUFFIX=ssl","DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+        makeSource([Ism.settings.makeOptions,"MANSUFFIX=ssl","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         @useChroot=false
         copyDirectory("#{Ism.settings.rootPath}/usr/share/doc/openssl","#{builtSoftwareDirectoryPath}/usr/share/doc/openssl-1.1.1l")
     end
