@@ -15,9 +15,9 @@ class Target < ISM::Software
 
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"PREFIX=/usr","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        copyFile("#{buildDirectoryPath}/libbz2.so.*","#{builtSoftwareDirectoryPath}/usr/lib")
-        copyFile("#{buildDirectoryPath}/bzip2-shared","#{builtSoftwareDirectoryPath}/usr/bin/bzip2")
+        makeSource([Ism.settings.makeOptions,"PREFIX=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr","install"],buildDirectoryPath)
+        copyFile(Dir["#{buildDirectoryPath}/libbz2.so.*"],"#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib")
+        copyFile("#{buildDirectoryPath}/bzip2-shared","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/bin/bzip2")
     end
 
     def install
@@ -29,7 +29,7 @@ class Target < ISM::Software
 
     def clean
         super
-        removeFile("#{Ism.settings.rootPath}/usr/lib/libbz2.a")
+        deleteFile("#{Ism.settings.rootPath}/usr/lib/libbz2.a")
     end
 
 end
