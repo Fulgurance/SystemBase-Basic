@@ -2,8 +2,8 @@ class Target < ISM::Software
 
     def prepare
         super
-        fileDeleteLine("#{buildDirectoryPath}/ksym_mod.c",192)
-        fileReplaceText("#{buildDirectoryPath}/syslogd.c","union wait","int")
+        fileDeleteLine("#{buildDirectoryPath(false)}/ksym_mod.c",192)
+        fileReplaceText("#{buildDirectoryPath(false)}/syslogd.c","union wait","int")
     end
     
     def build

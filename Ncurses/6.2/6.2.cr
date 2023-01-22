@@ -20,11 +20,11 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libncurses.so","INPUT(-lncursesw)")
-        fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libform.so","INPUT(-lformw)")
-        fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libpanel.so","INPUT(-lpanelw)")
-        fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libmenu.so","INPUT(-lmenuw)")
-        fileAppendData("#{builtSoftwareDirectoryPath}/usr/lib/libcursesw.so","INPUT(-lncursesw)")
+        fileAppendData("#{builtSoftwareDirectoryPath(false)}/usr/lib/libncurses.so","INPUT(-lncursesw)")
+        fileAppendData("#{builtSoftwareDirectoryPath(false)}/usr/lib/libform.so","INPUT(-lformw)")
+        fileAppendData("#{builtSoftwareDirectoryPath(false)}/usr/lib/libpanel.so","INPUT(-lpanelw)")
+        fileAppendData("#{builtSoftwareDirectoryPath(false)}/usr/lib/libmenu.so","INPUT(-lmenuw)")
+        fileAppendData("#{builtSoftwareDirectoryPath(false)}/usr/lib/libcursesw.so","INPUT(-lncursesw)")
     end
 
     def install

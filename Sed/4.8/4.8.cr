@@ -15,8 +15,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        makeDirectory("#{builtSoftwareDirectoryPath}/usr/share/doc/sed-4.8")
-        copyFile("#{buildDirectoryPath}/doc/sed.html","#{builtSoftwareDirectoryPath}/usr/share/doc/sed-4.8/sed.html")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}/usr/share/doc/sed-4.8")
+        copyFile("#{buildDirectoryPath(false)}/doc/sed.html","#{builtSoftwareDirectoryPath(false)}/usr/share/doc/sed-4.8/sed.html")
     end
 
 end

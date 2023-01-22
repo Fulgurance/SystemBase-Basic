@@ -2,8 +2,8 @@ class Target < ISM::Software
 
     def prepare
         super
-        fileReplaceText("#{buildDirectoryPath}/configure","RESIZECONS_PROGS=yes","RESIZECONS_PROGS=no")
-        fileReplaceText("#{buildDirectoryPath}/docs/man/man8/Makefile.in","resizecons.8 ","")
+        fileReplaceText("#{buildDirectoryPath(false)}/configure","RESIZECONS_PROGS=yes","RESIZECONS_PROGS=no")
+        fileReplaceText("#{buildDirectoryPath(false)}/docs/man/man8/Makefile.in","resizecons.8 ","")
     end
 
     def configure

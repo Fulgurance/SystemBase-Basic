@@ -2,8 +2,8 @@ class Target < ISM::Software
 
     def prepare
         super
-        fileReplaceText("#{buildDirectoryPath}/Makefile.in","-$(MV)","")
-        fileReplaceLineContaining("#{buildDirectoryPath}/support/shlib-install","{OLDSUFF}",":")
+        fileReplaceText("#{buildDirectoryPath(false)}/Makefile.in","-$(MV)","")
+        fileReplaceLineContaining("#{buildDirectoryPath(false)}/support/shlib-install","{OLDSUFF}",":")
     end
 
     def configure

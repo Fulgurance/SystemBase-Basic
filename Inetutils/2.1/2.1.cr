@@ -23,12 +23,12 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        copyFile("/usr/bin/ifconfig","#{builtSoftwareDirectoryPath}/usr/sbin/ifconfig")
+        copyFile("/usr/bin/ifconfig","#{builtSoftwareDirectoryPath(false)}/usr/sbin/ifconfig")
     end
 
     def clear
         super
-        deleteFile("/usr/bin/ifconfig")
+        deleteFile("#{Ism.settings.rootPath}/usr/bin/ifconfig")
     end
 
 end

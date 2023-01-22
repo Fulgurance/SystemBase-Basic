@@ -3,9 +3,9 @@ class Target < ISM::Software
     def prepare
         @buildDirectory = true
         super
-        fileDeleteLine("#{mainWorkDirectoryPath}",170)
-        fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath}","return kAltStackSize;","return SIGSTKSZ * 4;",170)
-        fileReplaceText(mainWorkDirectoryPath +
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}/libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cpp",170)
+        fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath(false)}/libsanitizer/sanitizer_common/sanitizer_posix_libcdep.cpp","return kAltStackSize;","return SIGSTKSZ * 4;",170)
+        fileReplaceText(mainWorkDirectoryPath(false) +
                         "/gcc/config/i386/t-linux64",
                         "m64=../lib64",
                         "m64=../lib")
@@ -30,8 +30,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        makeDirectory("#{builtSoftwareDirectoryPath}/usr/share/gdb/auto-load/usr/lib")
-        copyFile("#{Ism.settings.rootPath}/usr/lib/*gdb.py","#{builtSoftwareDirectoryPath}/usr/share/gdb/auto-load/usr/lib")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}/usr/share/gdb/auto-load/usr/lib")
+        copyFile("#{Ism.settings.rootPath}/usr/lib/*gdb.py","#{builtSoftwareDirectoryPath(false)}/usr/share/gdb/auto-load/usr/lib")
     end
 
     def install

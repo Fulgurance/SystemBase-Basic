@@ -2,7 +2,7 @@ class Target < ISM::Software
 
     def prepare
         super
-        fileReplaceText("#{buildDirectoryPath}/gnulib/lib/malloc/dynarray-skeleton.c","__attribute_nonnull__","__nonnull")
+        fileReplaceText("#{buildDirectoryPath(false)}/gnulib/lib/malloc/dynarray-skeleton.c","__attribute_nonnull__","__nonnull")
     end
     
     def configure

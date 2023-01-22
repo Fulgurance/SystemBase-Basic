@@ -3,8 +3,8 @@ class Target < ISM::Software
     def prepare
         @buildDirectory = true
         super
-        fileDeleteLine("#{mainWorkDirectoryPath}/etc/texi2pod.pl",63)
-        deleteAllFilesRecursivelyFinishing("#{mainWorkDirectoryPath}",".1")
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}/etc/texi2pod.pl",63)
+        deleteAllFilesRecursivelyFinishing("#{mainWorkDirectoryPath(false)}",".1")
     end
 
     def configure

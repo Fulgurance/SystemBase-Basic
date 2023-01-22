@@ -2,7 +2,7 @@ class Target < ISM::Software
     
     def prepare
         super
-        fileReplaceText("#{buildDirectoryPath}/Makefile.in","extras","")
+        fileReplaceText("#{buildDirectoryPath(false)}/Makefile.in","extras","")
     end
 
     def configure
