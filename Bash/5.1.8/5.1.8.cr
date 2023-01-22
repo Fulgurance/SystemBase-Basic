@@ -2,7 +2,6 @@ class Target < ISM::Software
     
     def configure
         super
-        @useChroot=true
         configureSource([   "--prefix=/usr",
                             "--docdir=/usr/share/doc/bash-5.1.8",
                             "--without-bash-malloc",
@@ -18,7 +17,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        @useChroot=false
     end
 
 end

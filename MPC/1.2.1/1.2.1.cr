@@ -2,7 +2,6 @@ class Target < ISM::Software
 
     def configure
         super
-        @useChroot=true
         configureSource([   "--prefix=/usr",
                             "--disable-static",
                             "--docdir=/usr/share/doc/mpc-1.2.1"],
@@ -19,7 +18,6 @@ class Target < ISM::Software
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install-html"],buildDirectoryPath)
-        @useChroot=false
     end
 
 end

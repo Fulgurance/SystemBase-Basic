@@ -9,7 +9,6 @@ class Target < ISM::Software
 
     def configure
         super
-        @useChroot=true
         configureSource([   "--prefix=/usr",
                             "--enable-gold",
                             "--enable-ld=default",
@@ -29,7 +28,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"tooldir=/usr","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        @useChroot=false
         deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/bfd.a")
         deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/ctf.a")
         deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/ctf-nobfd.a")

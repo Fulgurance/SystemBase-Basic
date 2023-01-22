@@ -2,7 +2,6 @@ class Target < ISM::Software
     
     def configure
         super
-        @useChroot=true
         runScript("Configure",[ "-des",
                                 "-Dprefix=/usr",
                                 "-Dvendorprefix=/usr",
@@ -29,7 +28,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"BUILD_ZLIB=False","BUILD_BZIP2=0","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        @useChroot=false
     end
 
 end

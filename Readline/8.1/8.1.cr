@@ -8,7 +8,6 @@ class Target < ISM::Software
 
     def configure
         super
-        @useChroot=true
         configureSource([   "--prefix=/usr",
                             "--disable-static",
                             "--with-curses",
@@ -24,7 +23,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"SHLIB_LIBS=\"-lncursesw\"","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        @useChroot=false
     end
 
 end

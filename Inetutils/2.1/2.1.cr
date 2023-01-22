@@ -2,7 +2,6 @@ class Target < ISM::Software
 
     def configure
         super
-        @useChroot=true
         configureSource([   "--prefix=/usr",
                             "--bindir=/usr/bin",
                             "--localstatedir=/var",
@@ -24,7 +23,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        @useChroot=false
         copyFile("/usr/bin/ifconfig","#{builtSoftwareDirectoryPath}/usr/sbin/ifconfig")
     end
 

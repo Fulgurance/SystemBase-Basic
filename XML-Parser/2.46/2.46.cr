@@ -2,7 +2,6 @@ class Target < ISM::Software
     
     def prepare
         super
-        @useChroot=true
         makePerlSource(buildDirectoryPath)
     end
     
@@ -14,7 +13,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        @useChroot=false
     end
 
 end
