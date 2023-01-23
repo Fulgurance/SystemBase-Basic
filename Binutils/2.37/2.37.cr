@@ -28,10 +28,14 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"tooldir=/usr","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/bfd.a")
-        deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/ctf.a")
-        deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/ctf-nobfd.a")
-        deleteFile("#{Ism.settings.rootPath}/usr/lib/lib/opcodes.a")
+    end
+
+    def clean
+        super
+        deleteFile("#{Ism.settings.rootPath}/usr/lib/libbfd.a")
+        deleteFile("#{Ism.settings.rootPath}/usr/lib/libctf.a")
+        deleteFile("#{Ism.settings.rootPath}/usr/lib/libctf-nobfd.a")
+        deleteFile("#{Ism.settings.rootPath}/usr/lib/libopcodes.a")
     end
 
 end

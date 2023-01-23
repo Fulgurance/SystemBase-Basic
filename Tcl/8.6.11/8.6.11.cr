@@ -1,5 +1,10 @@
 class Target < ISM::Software
 
+    def extract
+        super
+        moveFile("#{workDirectoryPath9(false)}/tcl8.6.11","#{workDirectoryPath9(false)}/tcl8.6.11-src")
+    end
+
     def configure
         super
         configureSource([   "--prefix=/usr",

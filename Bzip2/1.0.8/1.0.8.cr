@@ -4,8 +4,8 @@ class Target < ISM::Software
         super
         fileReplaceText("#{buildDirectoryPath(false)}/Makefile","ln -s -f $(PREFIX)/bin/","ln -s -f ")
         fileReplaceText("#{buildDirectoryPath(false)}/Makefile","$(PREFIX)/man","$(PREFIX)/share/man")
-        makeSource([Ism.settings.makeOptions,"-f","Makefile-libbz2_so"],buildDirectoryPath(false))
-        makeSource([Ism.settings.makeOptions,"clean"],buildDirectoryPath(false))
+        makeSource([Ism.settings.makeOptions,"-f","Makefile-libbz2_so"],buildDirectoryPath)
+        makeSource([Ism.settings.makeOptions,"clean"],buildDirectoryPath)
     end
 
     def build
