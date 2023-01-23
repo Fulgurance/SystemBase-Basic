@@ -1,7 +1,11 @@
 class Target < ISM::Software
 
-    def configure
+    def prepare
+        super
         @buildDirectory = true
+    end
+
+    def configure
         super
         configureSource([   "--prefix=/usr",
                             "--sysconfdir=/etc",

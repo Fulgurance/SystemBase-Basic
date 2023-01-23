@@ -1,5 +1,10 @@
 class Target < ISM::Software
 
+    def extract
+        super
+        moveFile("#{workDirectoryPath(false)}/procps-3.3.17","#{workDirectoryPath(false)}/procps-ng-3.3.17")
+    end
+
     def configure
         super
         configureSource([   "--prefix=/usr",

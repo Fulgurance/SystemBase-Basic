@@ -5,7 +5,7 @@ class Target < ISM::Software
         configureSource([   "--prefix=/usr",
                             "--bindir=/usr/sbin",
                             "--sysconfdir=/etc",
-                            "--enable-manpages"
+                            "--enable-manpages",
                             "--disable-static"],
                             buildDirectoryPath)
     end
@@ -18,7 +18,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        makeSource([Ism.settings.makeOptions,"-f","Makefile.lfs","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],"#{workDirectoryPath}/udev-lfs-20171102")
+        makeSource([Ism.settings.makeOptions,"-f","udev-lfs-20171102/Makefile.lfs","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],workDirectoryPath)
     end
 
 end
