@@ -6,6 +6,7 @@ class Target < ISM::Software
         configureSource([   "--prefix=/usr",
                             "--enable-no-install-program=kill,uptime"],
                             buildDirectoryPath,
+                            "",
                             {"FORCE_UNSAFE_CONFIGURE" => "1"})
     end
     
