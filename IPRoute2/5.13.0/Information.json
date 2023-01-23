@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "IPRoute2",
+  "version": "5.13.0",
+  "architectures": ["x86_64"],
+  "description": "Collection of utilities for controlling TCP / IP networking and traffic control in Linux",
+  "website": "https://www.kernel.org/pub/linux/utils/net/iproute2/",
+  "downloadLinks": ["https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-5.13.0.tar.xz"],
+  "md5sums": ["15fc3786303a173a14e180afe4cd2ecd"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gzip",
+      "version": "1.10",
+      "options": []
+    }
+  ],
+  "options": []
+}

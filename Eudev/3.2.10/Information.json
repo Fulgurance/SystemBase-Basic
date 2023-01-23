@@ -1,0 +1,22 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Eudev",
+  "version": "3.2.10",
+  "architectures": ["x86_64"],
+  "description": "Linux dynamic and persistent device naming support",
+  "website": "https://github.com/eudev-project/eudev",
+  "downloadLinks": ["https://dev.gentoo.org/~blueness/eudev/eudev-3.2.10.tar.gz",
+                    "https://anduin.linuxfromscratch.org/LFS/udev-lfs-20171102.tar.xz"],
+  "md5sums": ["60b135a189523f333cea5f71a3345c8d",
+              "27cd82f9a61422e186b9d6759ddf1634"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Nano",
+      "version": "5.8",
+      "options": []
+    }
+  ],
+  "options": []
+}

@@ -1,29 +1,24 @@
 class Target < ISM::Software
-    
+
     def configure
         super
         configureSource([   "--prefix=/usr",
-                            "--enable-shared",
-                            "--with-system-expat",
-                            "--with-system-ffi",
-                            "--with-ensurepip=yes",
-                            "--enable-optimizations"],
+                            "--bindir=/usr/sbin",
+                            "--sysconfdir=/etc",
+                            "--enable-manpages"
+                            "--disable-static"],
                             buildDirectoryPath)
     end
-    
+
     def build
         super
         makeSource([Ism.settings.makeOptions],buildDirectoryPath)
     end
-    
+
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-    end
-
-    def install
-        super
-        makeLink("python3","#{Ism.settings.rootPath}/usr/bin/python",:symbolicLink)
+        makeSource([Ism.settings.makeOptions,"-f","Makefile.lfs","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],"#{workDirectoryPath}/udev-lfs-20171102")
     end
 
 end

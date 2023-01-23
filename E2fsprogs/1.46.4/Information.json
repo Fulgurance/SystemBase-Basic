@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "E2fsprogs",
+  "version": "1.46.4",
+  "architectures": ["x86_64"],
+  "description": "Filesystem utilities for use with the ext2, ext3 and ext4 filesystems",
+  "website": "http://e2fsprogs.sourceforge.net/",
+  "downloadLinks": ["https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.46.4/e2fsprogs-1.46.4.tar.gz"],
+  "md5sums": ["128f5b0f0746b28d1e3ca7e263c57094"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Util-Linux",
+      "version": "2.37.2",
+      "options": []
+    }
+  ],
+  "options": []
+}

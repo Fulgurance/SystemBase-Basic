@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Ninja",
+  "version": "1.10.2",
+  "architectures": ["x86_64"],
+  "description": "Small build system with a focus on speed",
+  "website": "https://ninja-build.org/",
+  "downloadLinks": ["https://github.com/ninja-build/ninja/archive/v1.10.2/ninja-1.10.2.tar.gz"],
+  "md5sums": ["639f75bc2e3b19ab893eaf2c810d4eb4"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Python",
+      "version": "3.9.6",
+      "options": []
+    }
+  ],
+  "options": []
+}
