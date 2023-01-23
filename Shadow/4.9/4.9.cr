@@ -3,16 +3,18 @@ class Target < ISM::Software
     def prepare
         super
         fileReplaceText("#{buildDirectoryPath(false)}/src/Makefile.in","groups$(EXEEXT) ","")
-        replaceTextAllFilesRecursivelyNamed("#{buildDirectoryPath(false)}/man","Makefile.in","groups.1 ","")
-        replaceTextAllFilesRecursivelyNamed("#{buildDirectoryPath(false)}/man","Makefile.in","getspnam.3 ","")
-        replaceTextAllFilesRecursivelyNamed("#{buildDirectoryPath(false)}/man","Makefile.in","passwd.5 ","")
+        replaceTextAllFilesRecursivelyNamed("#{buildDirectoryPath(false)}/man","Makefile.in","groups.1 "," ")
+        replaceTextAllFilesRecursivelyNamed("#{buildDirectoryPath(false)}/man","Makefile.in","getspnam.3 "," ")
+        replaceTextAllFilesRecursivelyNamed("#{buildDirectoryPath(false)}/man","Makefile.in","passwd.5 "," ")
         fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}/libmisc/salt.c","rounds","min_rounds",224)
-        generateEmptyFile("#{buildDirectoryPath(false)}/usr/bin/passwd")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/bin/")
+        generateEmptyFile("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/bin/passwd")
+        generateEmptyFile("#{Ism.settings.rootPath}/usr/bin/passwd")
     end
 
     def configure
         super
-        configureSource([   "--sysconfdir=#{Ism.settings.rootPath}/etc",
+        configureSource([   "--sysconfdir=/etc",
                             "--with-group-name-max-length=32"],
                             buildDirectoryPath)
     end
