@@ -11,8 +11,8 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Man-DB",
-      "version": "2.9.4",
+      "name": "Eudev",
+      "version": "3.2.10",
       "options": []
     }
   ],
