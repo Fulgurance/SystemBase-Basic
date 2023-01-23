@@ -5,7 +5,7 @@
   "architectures": ["x86_64"],
   "description": "Perl module for parsing XML document",
   "website": "https://github.com/chorny/XML-Parser",
-  "downloadLinks": [" https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.46.tar.gz"],
+  "downloadLinks": ["https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.46.tar.gz"],
   "md5sums": ["80bb18a8e6240fcf7ec2f7b57601c170"],
   "patchesLinks": [],
   "installedFiles": [],

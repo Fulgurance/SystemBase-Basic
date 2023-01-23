@@ -2,7 +2,7 @@ class Target < ISM::Software
 
     def prepare
         super
-        fileReplaceText("#{buildDirectoryPath}/intltool-update.in","\${","\$\{")
+        fileReplaceText("#{buildDirectoryPath(false)}/intltool-update.in","\${","\$\{")
     end
 
     def configure
@@ -19,7 +19,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        copyFile("#{buildDirectoryPath(false)}doc/I18N-HOWTO","#{builtSoftwareDirectoryPath(false)}/usr/share/doc/intltool-0.51.0/I18N-HOWTO")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/doc/intltool-0.51.0")
+        copyFile("#{buildDirectoryPath(false)}/doc/I18N-HOWTO","#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/doc/intltool-0.51.0/I18N-HOWTO")
     end
 
 end
