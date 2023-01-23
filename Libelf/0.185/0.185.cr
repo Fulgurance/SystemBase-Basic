@@ -16,7 +16,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"-C","libelf","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        copyFile("#{buildDirectoryPath(false)}/config/libelf.pc","#{builtSoftwareDirectoryPath}/usr/lib/pkgconfig")
+        makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/")
+        copyFile("#{buildDirectoryPath(false)}/config/libelf.pc","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/pkgconfig")
     end
 
     def clean
