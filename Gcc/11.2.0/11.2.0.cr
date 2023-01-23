@@ -37,12 +37,12 @@ class Target < ISM::Software
     def install
         super
         makeLink("/usr/bin/cpp","#{Ism.settings.rootPath}/usr/lib",:symbolicLink)
-        makeLink("../../libexec/gcc/$(gcc -dumpmachine)/11.2.0/liblto_plugin.so","#{Ism.settings.rootPath}/usr/lib/bfd-plugins/",:symbolicLinkByOverwrite)
+        makeLink("../../libexec/gcc/#{Ism.settings.target}/11.2.0/liblto_plugin.so","#{Ism.settings.rootPath}/usr/lib/bfd-plugins/",:symbolicLinkByOverwrite)
     end
 
     def clean
         super
-        deleteDirectoryRecursively("#{Ism.settings.rootPath}/usr/lib/gcc/$(gcc -dumpmachine)/11.2.0/include-fixed/bits/")
+        deleteDirectoryRecursively("#{Ism.settings.rootPath}/usr/lib/gcc/#{Ism.settings.target}/11.2.0/include-fixed/bits/")
         deleteFile(Dir["#{Ism.settings.rootPath}/usr/lib/*gdb.py"])
     end
 
