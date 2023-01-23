@@ -2,7 +2,7 @@ class Target < ISM::Software
 
     def configure
         super
-        configureSource([   "--prefix=#{Ism.settings.rootPath}/usr"],
+        configureSource([   "--prefix=/usr"],
                             buildDirectoryPath)
     end
 
