@@ -5,7 +5,7 @@
   "architectures": ["x86_64"],
   "description": "Stream-oriented XML parser library written in C",
   "website": "https://libexpat.github.io/",
-  "downloadLinks": ["https://prdownloads.sourceforge.net/expat/expat-2.4.1.tar.xz"],
+  "downloadLinks": ["https://github.com/libexpat/libexpat/releases/download/R_2_4_1/expat-2.4.1.tar.xz"],
   "md5sums": ["a4fb91a9441bcaec576d4c4a56fa3aa6"],
   "patchesLinks": [],
   "installedFiles": [],
