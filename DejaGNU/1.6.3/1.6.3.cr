@@ -25,9 +25,12 @@ class Target < ISM::Software
                             "../doc/dejagnu.texi"],
                             buildDirectoryPath(false))
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        makeDirectory("#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3")
-        moveFile("#{buildDirectoryPath(false)}/doc/dejagnu.html","#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3/dejagnu.html")
-        moveFile("#{buildDirectoryPath(false)}/doc/dejagnu.txt","#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3/dejagnu.txt")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/dejagnu-1.6.3")
+        moveFile("#{buildDirectoryPath(false)}/doc/dejagnu.html","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3/dejagnu.html")
+        moveFile("#{buildDirectoryPath(false)}/doc/dejagnu.txt","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3/dejagnu.txt")
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3",755)
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3/dejagnu.html",644)
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3/dejagnu.txt",644)
     end
 
 end

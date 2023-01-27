@@ -18,6 +18,7 @@ class Target < ISM::Software
         makeSource([Ism.settings.makeOptions,"-C","libelf","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/")
         copyFile("#{buildDirectoryPath(false)}/config/libelf.pc","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/pkgconfig")
+        setPermissions("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/pkgconfig/libelf.pc",644)
     end
 
     def clean

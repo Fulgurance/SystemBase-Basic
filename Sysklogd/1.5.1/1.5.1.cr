@@ -14,6 +14,17 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"BINDIR=/sbin","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+
+        syslogData = <<-CODE
+        auth,authpriv.* -/var/log/auth.log
+        *.*;auth,authpriv.none -/var/log/sys.log
+        daemon.* -/var/log/daemon.log
+        kern.* -/var/log/kern.log
+        mail.* -/var/log/mail.log
+        user.* -/var/log/user.log
+        *.emerg *
+        CODE
+        fileWriteData("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}etc/syslog.conf",syslogData)
     end
 
 end

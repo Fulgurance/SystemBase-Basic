@@ -12,6 +12,8 @@ class Target < ISM::Software
         copyFile("#{buildDirectoryPath(false)}/data/shell-completions/bash/meson","#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/bash-completion/completions/meson")
         makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/zsh/site-functions/_meson")
         copyFile("#{buildDirectoryPath(false)}/data/shell-completions/zsh/_meson","#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/zsh/site-functions/_meson")
+        setPermissions("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}usr/share/bash-completion/completions/meson",644)
+        setPermissions("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}usr/share/zsh/site-functions/_meson",644)
     end
 
 end

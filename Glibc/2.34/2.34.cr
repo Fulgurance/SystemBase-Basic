@@ -31,6 +31,28 @@ class Target < ISM::Software
         fileReplaceText("#{mainWorkDirectoryPath(false)}/Makefile","$(PERL)","echo not running")
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         copyFile("#{mainWorkDirectoryPath(false)}/nscd/nscd.conf","#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/etc/nscd.conf")
+
+        nsswitchData = <<-CODE
+        passwd: files
+        group: files
+        shadow: files
+
+        hosts: files dns
+        networks: files
+
+        protocols: files
+        services: files
+        ethers: files
+        rpc: files
+        CODE
+        fileWriteData("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}etc/nsswitch.conf",nsswitchData)
+
+        ldsoData = <<-CODE
+        /usr/local/lib
+        /opt/lib
+        include /etc/ld.so.conf.d/*.conf
+        CODE
+        fileWriteData("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}etc/ld.so.conf",ldsoData)
     end
 
 end

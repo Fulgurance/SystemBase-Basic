@@ -31,7 +31,9 @@ class Target < ISM::Software
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/gdb/auto-load/usr/lib")
-        copyFile("#{Ism.settings.rootPath}/usr/lib/*gdb.py","#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/gdb/auto-load/usr/lib")
+        moveFile(Dir["#{Ism.settings.rootPath}/usr/lib/*gdb.py"],"#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/gdb/auto-load/usr/lib")
+        setOwner("/usr/lib/gcc/#{Ism.settings.target}/linux-gnu/11.2.0/include","root","root")
+        setOwner("/usr/lib/gcc/#{Ism.settings.target}/linux-gnu/11.2.0/include-fixed","root","root")
     end
 
     def install
@@ -43,7 +45,6 @@ class Target < ISM::Software
     def clean
         super
         deleteDirectoryRecursively("#{Ism.settings.rootPath}/usr/lib/gcc/#{Ism.settings.target}/11.2.0/include-fixed/bits/")
-        deleteFile(Dir["#{Ism.settings.rootPath}/usr/lib/*gdb.py"])
     end
 
 end

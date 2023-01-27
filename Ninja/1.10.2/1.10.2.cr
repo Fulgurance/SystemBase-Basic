@@ -13,6 +13,9 @@ class Target < ISM::Software
         copyFile("#{buildDirectoryPath(false)}/misc/bash-completion","#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/bash-completion/completions/ninja")
         makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/zsh/site-functions/_ninja")
         copyFile("#{buildDirectoryPath(false)}/misc/zsh-completion","#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/zsh/site-functions/_ninja")
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/ninja",755)
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/bash-completion/completions/ninja",644)
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/zsh/site-functions/_ninja",644)
     end
 
 end
