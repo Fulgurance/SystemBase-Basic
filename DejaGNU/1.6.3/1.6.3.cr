@@ -13,17 +13,17 @@ class Target < ISM::Software
 
     def prepareInstallation
         super
-        fileMakeinfo([  "--html",
-                        "--no-split",
-                        "-o",
-                        "doc/dejagnu.html",
-                        "../doc/dejagnu.texi"],
-                        buildDirectoryPath(false))
-        fileMakeinfo([  "--plaintext",
-                        "-o",
-                        "doc/dejagnu.txt",
-                        "../doc/dejagnu.texi"],
-                        buildDirectoryPath(false))
+        runMakeinfoCommand(["--html",
+                            "--no-split",
+                            "-o",
+                            "doc/dejagnu.html",
+                            "../doc/dejagnu.texi"],
+                            buildDirectoryPath(false))
+        runMakeinfoCommand(["--plaintext",
+                            "-o",
+                            "doc/dejagnu.txt",
+                            "../doc/dejagnu.texi"],
+                            buildDirectoryPath(false))
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         makeDirectory("#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3")
         moveFile("#{buildDirectoryPath(false)}/doc/dejagnu.html","#{Ism.settings.rootPath}/usr/share/doc/dejagnu-1.6.3/dejagnu.html")
