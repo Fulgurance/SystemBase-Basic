@@ -2,7 +2,7 @@ class Target < ISM::Software
 
     def extract
         super
-        moveFile("#{workDirectoryPath9(false)}/tcl8.6.11","#{workDirectoryPath9(false)}/tcl8.6.11-src")
+        moveFile("#{workDirectoryPath(false)}/tcl8.6.11","#{workDirectoryPath(false)}/tcl8.6.11-src")
     end
 
     def configure
