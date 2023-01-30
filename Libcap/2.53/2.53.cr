@@ -14,8 +14,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"prefix=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr","lib=lib","install"],buildDirectoryPath)
-        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libcap.so.2.53")
-        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libpsx.so.2.53")
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libcap.so.2.53",0o755)
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libpsx.so.2.53",0o755)
     end
 
 end

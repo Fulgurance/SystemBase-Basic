@@ -31,4 +31,10 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/etc/default")
     end
 
+    def install
+        super
+        runPwconvCommand
+        runGrpconvCommand
+    end
+
 end

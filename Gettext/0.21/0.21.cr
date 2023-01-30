@@ -16,7 +16,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib/preloadable_libintl.so",0755)
+        setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib/preloadable_libintl.so",0o755)
     end
 
 end

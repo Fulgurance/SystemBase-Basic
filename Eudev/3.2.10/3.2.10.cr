@@ -21,4 +21,9 @@ class Target < ISM::Software
         makeSource([Ism.settings.makeOptions,"-f","udev-lfs-20171102/Makefile.lfs","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],workDirectoryPath)
     end
 
+    def install
+        super
+        runUdevadmCommand(["hwdb","--update"])
+    end
+
 end
