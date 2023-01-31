@@ -16,14 +16,18 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"-C","libelf","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/")
-        copyFile("#{buildDirectoryPath(false)}/config/libelf.pc","#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/pkgconfig")
-        setPermissions("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/pkgconfig/libelf.pc",644)
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig")
+        copyFile("#{buildDirectoryPath(false)}config/libelf.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig/libelf.pc")
+    end
+
+    def install
+        super
+        setPermissions("#{Ism.settings.rootPath}usr/lib/pkgconfig/libelf.pc",0o644)
     end
 
     def clean
         super
-        deleteFile("#{Ism.settings.rootPath}/usr/lib/libelf.a")
+        deleteFile("#{Ism.settings.rootPath}usr/lib/libelf.a")
     end
 
 end

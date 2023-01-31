@@ -32,12 +32,14 @@ class Target < ISM::Software
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/gdb/auto-load/usr/lib")
         moveFile(Dir["#{Ism.settings.rootPath}/usr/lib/*gdb.py"],"#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/share/gdb/auto-load/usr/lib")
-        setOwner("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/gcc/#{Ism.settings.target}/linux-gnu/11.2.0/include","root","root")
-        setOwner("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/gcc/#{Ism.settings.target}/linux-gnu/11.2.0/include-fixed","root","root")
     end
 
     def install
         super
+        setOwnerRecursively("#{Ism.settings.rootPath}usr/lib/gcc/#{Ism.settings.target}/linux-gnu/11.2.0/include","root","root")
+        setOwnerRecursively("#{Ism.settings.rootPath}usr/lib/gcc/#{Ism.settings.target}/linux-gnu/11.2.0/include-fixed","root","root")
+        setOwnerRecursively("#{Ism.settings.rootPath}usr/lib/gcc/#{Ism.settings.architecture}-pc-linux-gnu/11.2.0/include","root","root")
+        setOwnerRecursively("#{Ism.settings.rootPath}usr/lib/gcc/#{Ism.settings.architecture}-pc-linux-gnu/11.2.0/include-fixed","root","root")
         makeLink("/usr/bin/cpp","#{Ism.settings.rootPath}/usr/lib",:symbolicLink)
         makeLink("../../libexec/gcc/#{Ism.settings.target}/11.2.0/liblto_plugin.so","#{Ism.settings.rootPath}/usr/lib/bfd-plugins/",:symbolicLinkByOverwrite)
     end
