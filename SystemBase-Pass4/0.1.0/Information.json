@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "SystemBase-Pass4",
+  "version": "0.1.0",
+  "architectures": ["x86_64"],
+  "description": "Installer to prepare the system base hierarchy",
+  "website": "",
+  "downloadLinks": [],
+  "md5sums": [],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Sysvinit",
+      "version": "2.99.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

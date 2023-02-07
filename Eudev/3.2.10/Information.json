@@ -14,7 +14,7 @@
   "dependencies": [
     {
       "name": "Nano",
-      "version": "5.8",
+      "version": "5.8.0",
       "options": []
     }
   ],

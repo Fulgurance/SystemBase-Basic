@@ -12,7 +12,7 @@
   "dependencies": [
     {
       "name": "XML-Parser",
-      "version": "2.46",
+      "version": "2.46.0",
       "options": []
     }
   ],

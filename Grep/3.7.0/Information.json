@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Grep",
+  "version": "3.7.0",
+  "architectures": ["x86_64"],
+  "description": "Grep searches utility to find specified pattern",
+  "website": "https://www.gnu.org/software/grep/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz"],
+  "md5sums": ["7c9cca97fa18670a21e72638c3e1dabf"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Bison",
+      "version": "3.7.6",
+      "options": []
+    }
+  ],
+  "options": []
+}

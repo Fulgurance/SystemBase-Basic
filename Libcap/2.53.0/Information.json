@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Libcap",
+  "version": "2.53.0",
+  "architectures": ["x86_64"],
+  "description": "Library implements the user-space interfaces to the POSIX capabilities available in Linux kernel",
+  "website": "https://sites.google.com/site/fullycapable/",
+  "downloadLinks": ["https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.53.tar.xz"],
+  "md5sums": ["094994d4554c6689cf98ae4f717b8e19"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Acl",
+      "version": "2.3.1",
+      "options": []
+    }
+  ],
+  "options": []
+}

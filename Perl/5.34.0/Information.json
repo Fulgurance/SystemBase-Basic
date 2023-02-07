@@ -12,7 +12,7 @@
   "dependencies": [
     {
       "name": "Less",
-      "version": "590",
+      "version": "590.0.0",
       "options": []
     }
   ],

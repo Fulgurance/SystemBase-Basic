@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Iana-Etc",
+  "version": "0.0.0-+20210611",
+  "architectures": ["x86_64"],
+  "description": "/etc/protocols and /etc/services files from IANA's Assigned Internet Protocol Numbers",
+  "website": "https://www.iana.org/protocols",
+  "downloadLinks": ["https://github.com/Mic92/iana-etc/releases/download/20210611/iana-etc-20210611.tar.gz"],
+  "md5sums": ["f2854be57fe281e3ffc7364984467d2f"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Man-Pages",
+      "version": "5.13.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

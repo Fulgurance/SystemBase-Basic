@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Openssl",
+  "version": "1.1.1-+l",
+  "architectures": ["x86_64"],
+  "description": "Full-featured toolkit for general-purpose cryptography and secure communication",
+  "website": "https://www.openssl.org/",
+  "downloadLinks": ["https://www.openssl.org/source/openssl-1.1.1l.tar.gz"],
+  "md5sums": ["ac0d4387f3ba0ad741b0580dd45f6ff3"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Libffi",
+      "version": "3.4.2",
+      "options": []
+    }
+  ],
+  "options": []
+}

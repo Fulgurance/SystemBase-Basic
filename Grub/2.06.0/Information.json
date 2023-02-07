@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Grub",
+  "version": "2.06.0",
+  "architectures": ["x86_64"],
+  "description": "Multiboot boot loader",
+  "website": "https://www.gnu.org/software/grub/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/grub/grub-2.06.tar.xz"],
+  "md5sums": ["cf0fd928b1e5479c8108ee52cb114363"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Groff",
+      "version": "1.22.4",
+      "options": []
+    }
+  ],
+  "options": []
+}

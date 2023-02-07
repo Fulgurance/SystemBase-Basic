@@ -12,7 +12,7 @@
   "dependencies": [
     {
       "name": "Autoconf",
-      "version": "2.71",
+      "version": "2.71.0",
       "options": []
     }
   ],

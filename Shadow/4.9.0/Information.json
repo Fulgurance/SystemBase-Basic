@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Shadow",
+  "version": "4.9.0",
+  "architectures": ["x86_64"],
+  "description": "Utility for converting UNIX password files to the shadow password format, plus programs for managing user and group accounts",
+  "website": "https://shadow-maint.github.io/shadow/",
+  "downloadLinks": ["https://github.com/shadow-maint/shadow/releases/download/v4.9/shadow-4.9.tar.xz"],
+  "md5sums": ["126924090caf72f3de7e9261fd4e10ac"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Libcap",
+      "version": "2.53.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

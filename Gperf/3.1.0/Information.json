@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Gperf",
+  "version": "3.1.0",
+  "architectures": ["x86_64"],
+  "description": "GNU perfect hash function generator",
+  "website": "https://www.gnu.org/software/gperf/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/gperf/gperf-3.1.tar.gz"],
+  "md5sums": ["9e251c0a618ad0824b51117d5d9db87e"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "GDBM",
+      "version": "1.20.0",
+      "options": []
+    }
+  ],
+  "options": []
+}

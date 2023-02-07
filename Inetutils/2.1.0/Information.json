@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Inetutils",
+  "version": "2.1.0",
+  "architectures": ["x86_64"],
+  "description": "Collection of common network programs",
+  "website": "https://www.gnu.org/software/inetutils/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/inetutils/inetutils-2.1.tar.xz"],
+  "md5sums": ["4e7676d1980e57c7df665e5c5c3c1047"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Expat",
+      "version": "2.4.1",
+      "options": []
+    }
+  ],
+  "options": []
+}

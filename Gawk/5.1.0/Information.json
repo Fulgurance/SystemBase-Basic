@@ -12,7 +12,7 @@
   "dependencies": [
     {
       "name": "Diffutils",
-      "version": "3.8",
+      "version": "3.8.0",
       "options": []
     }
   ],

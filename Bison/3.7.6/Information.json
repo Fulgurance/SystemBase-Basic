@@ -12,7 +12,7 @@
   "dependencies": [
     {
       "name": "Gettext",
-      "version": "0.21",
+      "version": "0.21.0",
       "options": []
     }
   ],

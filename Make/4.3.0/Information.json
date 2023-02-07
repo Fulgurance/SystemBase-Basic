@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Make",
+  "version": "4.3.0",
+  "architectures": ["x86_64"],
+  "description": "GNU Make tool to generate executables and other non-source files",
+  "website": "https://www.gnu.org/software/make/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/make/make-4.3.tar.gz"],
+  "md5sums": ["fc7a67ea86ace13195b0bce683fd4469"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Libpipeline",
+      "version": "1.5.3",
+      "options": []
+    }
+  ],
+  "options": []
+}

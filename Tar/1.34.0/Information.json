@@ -1,0 +1,20 @@
+{
+  "port": "SystemBase-Basic",
+  "name": "Tar",
+  "version": "1.34.0",
+  "architectures": ["x86_64"],
+  "description": "GNU Tar tool to create archives, stores and extract files",
+  "website": "https://www.gnu.org/software/tar/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/tar/tar-1.34.tar.xz"],
+  "md5sums": ["9a08d29a9ac4727130b5708347c0f5cf"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Patch",
+      "version": "2.7.6",
+      "options": []
+    }
+  ],
+  "options": []
+}

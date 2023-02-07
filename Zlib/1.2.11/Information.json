@@ -12,7 +12,7 @@
   "dependencies": [
     {
       "name": "Glibc",
-      "version": "2.34",
+      "version": "2.34.0",
       "options": []
     }
   ],

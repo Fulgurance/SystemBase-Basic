@@ -12,7 +12,7 @@
   "dependencies": [
     {
       "name": "Libelf",
-      "version": "0.185",
+      "version": "0.185.0",
       "options": []
     }
   ],
