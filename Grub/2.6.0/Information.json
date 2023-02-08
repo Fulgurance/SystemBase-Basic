@@ -1,7 +1,7 @@
 {
   "port": "SystemBase-Basic",
   "name": "Grub",
-  "version": "2.06.0",
+  "version": "2.6.0",
   "architectures": ["x86_64"],
   "description": "Multiboot boot loader",
   "website": "https://www.gnu.org/software/grub/",
