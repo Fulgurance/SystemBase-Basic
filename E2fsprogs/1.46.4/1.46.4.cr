@@ -25,7 +25,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        runGunzipCommand(["libext2fs.info.gz"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/info/")
+        runGunzipCommand(["libext2fs.info.gz"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/info/")
     end
 
     def install
