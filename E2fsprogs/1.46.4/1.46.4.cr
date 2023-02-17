@@ -30,8 +30,8 @@ class Target < ISM::Software
 
     def install
         super
-        runInstallinfoCommand([ "--dir-file=#{Ism.settings.rootPath}usr/share/info/dir",
-                                "#{Ism.settings.rootPath}usr/share/info/libext2fs.info"])
+        runInstallinfoCommand([ "--dir-file=/usr/share/info/dir",
+                                "/usr/share/info/libext2fs.info"])
     end
 
     def clean
