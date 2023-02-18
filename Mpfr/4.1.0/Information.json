@@ -1,6 +1,6 @@
 {
   "port": "SystemBase-Basic",
-  "name": "MPFR",
+  "name": "Mpfr",
   "version": "4.1.0",
   "architectures": ["x86_64"],
   "description": "C library for multiple-precision floating-point computations with correct rounding",
@@ -11,7 +11,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "GMP",
+      "name": "Gmp",
       "version": "6.2.1",
       "options": []
     }

@@ -11,7 +11,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "GDBM",
+      "name": "Gdbm",
       "version": "1.20.0",
       "options": []
     }

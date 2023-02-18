@@ -11,7 +11,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "DejaGNU",
+      "name": "DejaGnu",
       "version": "1.6.3",
       "options": []
     }

@@ -1,6 +1,6 @@
 {
   "port": "SystemBase-Basic",
-  "name": "DejaGNU",
+  "name": "DejaGnu",
   "version": "1.6.3",
   "architectures": ["x86_64"],
   "description": "DejaGnu framework for testing other programs",

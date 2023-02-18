@@ -1,6 +1,6 @@
 {
   "port": "SystemBase-Basic",
-  "name": "MPC",
+  "name": "Mpc",
   "version": "1.2.1",
   "architectures": ["x86_64"],
   "description": "C library for the arithmetic of complex numbers with arbitrarily high precision and correct rounding of the result",
@@ -11,7 +11,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "MPFR",
+      "name": "Mpfr",
       "version": "4.1.0",
       "options": []
     }

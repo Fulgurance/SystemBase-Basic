@@ -11,7 +11,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Man-DB",
+      "name": "Man-Db",
       "version": "2.9.4",
       "options": []
     }
